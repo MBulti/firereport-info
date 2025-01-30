@@ -1,14 +1,112 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FireReport Support</title>
+    <style>
+        :root {
+            --primary: #B5192E;
+            --on-primary: #FFFFFF;
+            --secondary: #3E3E40;
+            --on-secondary: #FFFFFF;
+            --error: #CF1C34;
+            --on-error: #FFFFFF;
+            --surface: #222222;
+            --on-surface: #F3F3F3;
+            --inverse-surface: #9E9E9E;
+        }
+
+        /* Allgemeines Styling */
+        body {
+            background-color: var(--surface);
+            color: var(--on-surface);
+            font-family: Arial, sans-serif;
+            margin: 40px auto;
+            padding: 20px;
+            max-width: 800px;
+            line-height: 1.6;
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h1,
+        h2 {
+            color: var(--primary);
+        }
+
+        h2 {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 5px;
+            margin-top: 20px;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            padding: 20px;
+            background-color: var(--surface);
+            border-radius: 12px;
+        }
+
+        .contact-box {
+            background-color: var(--secondary);
+            padding: 15px;
+            border-radius: 8px;
+            color: var(--on-secondary);
+        }
+
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 14px;
+            color: var(--inverse-surface);
+        }
+    </style>
 </head>
+
 <body>
-    <h1>FireReport – Support</h1>
-    <p>Falls du Fragen oder Probleme mit der App hast, kontaktiere uns unter:</p>
-    <p><strong>Email:</strong> <a href="mailto:m.bulthaup.development@gmail.com">m.bulthaup.development@gmail.com</a></p>
-    <p>Alternativ kannst du unsere Datenschutzerklärung <a href="datenschutz.html">hier</a> einsehen.</p>
+
+    <div class="container">
+        <h1>FireReport Support</h1>
+        <p>Willkommen im Support-Bereich für FireReport. Falls du Fragen oder Probleme hast, stehen wir dir gerne zur
+            Verfügung.</p>
+
+        <h2>Kontakt</h2>
+        <div class="contact-box">
+            <p><strong>Email:</strong> <a
+                    href="mailto:m.bulthaup.development@gmail.com">m.bulthaup.development@gmail.com</a></p>
+            <p>Wir bemühen uns, Anfragen innerhalb von 24 Stunden zu beantworten.</p>
+        </div>
+
+        <h2>Häufig gestellte Fragen (FAQ)</h2>
+        <p><strong>🔹 Wie kann ich einen neuen Mangel melden?</strong><br>
+            Öffne die App und navigiere zum Bereich „Neuer Mangel“, um eine Meldung zu erstellen.</p>
+
+        <p><strong>🔹 Warum sind Push-Benachrichtigungen erforderlich?</strong><br>
+            Push-Benachrichtigungen informieren dich über wichtige Statusänderungen deiner Mängelberichte in Echtzeit.
+        </p>
+
+        <p><strong>🔹 Ich habe mein Passwort vergessen. Was kann ich tun?</strong><br>
+            Wende dich an den Administrator deiner Feuerwehr für eine Zurücksetzung.</p>
+
+        <h2>Weitere Informationen</h2>
+        <p>Unsere vollständige Datenschutzerklärung findest du hier:</p>
+        <p><a href="datenschutz.html">Datenschutzerklärung anzeigen</a></p>
+
+        <div class="footer">
+            <p>FireReport | &copy; 2025</p>
+        </div>
+    </div>
 </body>
+
 </html>

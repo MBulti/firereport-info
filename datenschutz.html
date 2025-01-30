@@ -1,102 +1,162 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datenschutzerklärung</title>
     <style>
+        :root {
+            --primary: #B5192E;
+            --on-primary: #FFFFFF;
+            --secondary: #3E3E40;
+            --on-secondary: #FFFFFF;
+            --error: #CF1C34;
+            --on-error: #FFFFFF;
+            --surface: #222222;
+            --on-surface: #F3F3F3;
+            --inverse-surface: #9E9E9E;
+        }
+
+        /* Allgemeines Styling */
         body {
+            background-color: var(--surface);
+            color: var(--on-surface);
             font-family: Arial, sans-serif;
-            margin: 40px;
+            margin: 40px auto;
             padding: 20px;
             max-width: 800px;
             line-height: 1.6;
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
         }
-        h1, h2 {
-            color: #333;
+
+        h1,
+        h2 {
+            color: var(--primary);
         }
+
+        h2 {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 5px;
+            margin-top: 20px;
+        }
+
         a {
-            color: #007bff;
+            color: var(--primary);
             text-decoration: none;
+            font-weight: bold;
         }
+
         a:hover {
             text-decoration: underline;
         }
+
+        .container {
+            padding: 20px;
+            background-color: var(--surface);
+            border-radius: 12px;
+        }
+
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 14px;
+            color: var(--inverse-surface);
+        }
     </style>
 </head>
+
 <body>
 
-    <h1>Datenschutzerklärung</h1>
-    <p><strong>Stand:</strong> Januar 2025</p>
+    <div class="container">
+        <h1>Datenschutzerklärung</h1>
+        <p><strong>Stand:</strong> Januar 2025</p>
 
-    <h2>1. Verantwortlicher</h2>
-    <p>Verantwortlich für die Datenverarbeitung im Zusammenhang mit dieser App ist:</p>
-    <p><strong>Moritz Bulthaup</strong><br>
-    E-Mail: <a href="mailto:m.bulthaup.development@gmail.com">m.bulthaup.development@gmail.com</a></p>
+        <h2>1. Verantwortlicher</h2>
+        <p>Verantwortlich für die Datenverarbeitung im Zusammenhang mit dieser App ist:</p>
+        <p><strong>Moritz Bulthaup</strong><br>
+            E-Mail: <a href="mailto:m.bulthaup.development@gmail.com">m.bulthaup.development@gmail.com</a></p>
 
-    <h2>2. Erhobene Daten</h2>
-    <p>Unsere App erhebt folgende Daten:</p>
-    <h3>a. Daten, die Sie bereitstellen:</h3>
-    <ul>
-        <li>Name, E-Mail-Adresse oder andere Informationen, die Sie bei der Registrierung oder Nutzung der App eingeben.</li>
-    </ul>
-    <h3>b. Automatisch erfasste Daten:</h3>
-    <ul>
-        <li>Geräteinformationen (z. B. Gerätetyp, Betriebssystem, IP-Adresse).</li>
-        <li>Geräte-Token für Push-Benachrichtigungen (via Firebase).</li>
-        <li>Protokolldaten über die Nutzung der App (z. B. Fehlerberichte, Zeitpunkte von Zugriffen).</li>
-    </ul>
+        <h2>2. Erhobene Daten</h2>
+        <p>Unsere App erhebt folgende Daten:</p>
+        <h3>a. Daten, die Sie bereitstellen:</h3>
+        <ul>
+            <li>Name, E-Mail-Adresse oder andere Informationen, die Sie bei der Registrierung oder Nutzung der App
+                eingeben.</li>
+        </ul>
+        <h3>b. Automatisch erfasste Daten:</h3>
+        <ul>
+            <li>Geräteinformationen (z. B. Gerätetyp, Betriebssystem, IP-Adresse).</li>
+            <li>Geräte-Token für Push-Benachrichtigungen (via Firebase).</li>
+            <li>Protokolldaten über die Nutzung der App (z. B. Fehlerberichte, Zeitpunkte von Zugriffen).</li>
+        </ul>
 
-    <h2>3. Zwecke der Datenverarbeitung</h2>
-    <p>Wir verarbeiten Ihre Daten zu folgenden Zwecken:</p>
-    <ul>
-        <li>Bereitstellung der grundlegenden Funktionen der App.</li>
-        <li>Versand von Push-Benachrichtigungen (über Firebase Cloud Messaging).</li>
-        <li>Verbesserung der App-Funktionalität und Sicherheit.</li>
-        <li>Analyse von Fehler- und Nutzungsdaten zur Optimierung der App.</li>
-    </ul>
+        <h2>3. Zwecke der Datenverarbeitung</h2>
+        <p>Wir verarbeiten Ihre Daten zu folgenden Zwecken:</p>
+        <ul>
+            <li>Bereitstellung der grundlegenden Funktionen der App.</li>
+            <li>Versand von Push-Benachrichtigungen (über Firebase Cloud Messaging).</li>
+            <li>Verbesserung der App-Funktionalität und Sicherheit.</li>
+            <li>Analyse von Fehler- und Nutzungsdaten zur Optimierung der App.</li>
+        </ul>
 
-    <h2>4. Speicherung der Daten</h2>
-    <ul>
-        <li><strong>Benutzerdaten:</strong> Ihre Daten werden in einer Backend-Datenbank gespeichert. Diese wird auf einem sicheren Server gehostet.</li>
-        <li><strong>Push-Benachrichtigungsdaten:</strong> Firebase verarbeitet das Geräte-Token und andere relevante Daten gemäß den eigenen Datenschutzrichtlinien: <a href="https://policies.google.com/privacy" target="_blank">Google Datenschutzrichtlinien</a>.</li>
-    </ul>
+        <h2>4. Speicherung der Daten</h2>
+        <ul>
+            <li><strong>Benutzerdaten:</strong> Ihre Daten werden in einer Backend-Datenbank gespeichert. Diese wird auf
+                einem sicheren Server gehostet.</li>
+            <li><strong>Push-Benachrichtigungsdaten:</strong> Firebase verarbeitet das Geräte-Token und andere relevante
+                Daten gemäß den eigenen Datenschutzrichtlinien: <a href="https://policies.google.com/privacy"
+                    target="_blank">Google Datenschutzrichtlinien</a>.</li>
+        </ul>
 
-    <h2>5. Weitergabe von Daten</h2>
-    <p>Ihre Daten werden nur in folgenden Fällen an Dritte weitergegeben:</p>
-    <h3>a. Firebase (Google LLC):</h3>
-    <ul>
-        <li>Nutzung für den Versand von Push-Benachrichtigungen.</li>
-    </ul>
-    <h3>b. Gesetzliche Verpflichtungen:</h3>
-    <ul>
-        <li>Wenn dies zur Erfüllung gesetzlicher Vorschriften erforderlich ist.</li>
-    </ul>
+        <h2>5. Weitergabe von Daten</h2>
+        <p>Ihre Daten werden nur in folgenden Fällen an Dritte weitergegeben:</p>
+        <h3>a. Firebase (Google LLC):</h3>
+        <ul>
+            <li>Nutzung für den Versand von Push-Benachrichtigungen.</li>
+        </ul>
+        <h3>b. Gesetzliche Verpflichtungen:</h3>
+        <ul>
+            <li>Wenn dies zur Erfüllung gesetzlicher Vorschriften erforderlich ist.</li>
+        </ul>
 
-    <h2>6. Push-Benachrichtigungen</h2>
-    <p>Wir verwenden Firebase Cloud Messaging, um Ihnen Push-Benachrichtigungen zu senden.</p>
-    <ul>
-        <li><strong>Zweck:</strong> Die Benachrichtigungen ermöglichen eine Echtzeit-Integration und stellen sicher, dass Sie sofort über wichtige Ereignisse informiert werden.</li>
-        <li><strong>Wichtiger Hinweis:</strong> Eine Deaktivierung der Push-Benachrichtigungen ist derzeit nicht möglich, da diese für den Betrieb und die Echtzeit-Kommunikation der App erforderlich sind.</li>
-        <li><strong>Rechtsgrundlage:</strong> Die Verarbeitung erfolgt auf Basis unseres berechtigten Interesses (Art. 6 DSGVO), da die Benachrichtigungen notwendig sind, um die Echtzeit-Funktionalitäten der App zu gewährleisten.</li>
-    </ul>
+        <h2>6. Push-Benachrichtigungen</h2>
+        <p>Wir verwenden Firebase Cloud Messaging, um Ihnen Push-Benachrichtigungen zu senden.</p>
+        <ul>
+            <li><strong>Zweck:</strong> Die Benachrichtigungen ermöglichen eine Echtzeit-Integration und stellen sicher,
+                dass Sie sofort über wichtige Ereignisse informiert werden.</li>
+            <li><strong>Wichtiger Hinweis:</strong> Eine Deaktivierung der Push-Benachrichtigungen ist derzeit nicht
+                möglich, da diese für den Betrieb und die Echtzeit-Kommunikation der App erforderlich sind.</li>
+            <li><strong>Rechtsgrundlage:</strong> Die Verarbeitung erfolgt auf Basis unseres berechtigten Interesses
+                (Art. 6 DSGVO), da die Benachrichtigungen notwendig sind, um die Echtzeit-Funktionalitäten der App zu
+                gewährleisten.</li>
+        </ul>
 
-    <h2>7. Sicherheit der Daten</h2>
-    <p>Wir setzen geeignete technische und organisatorische Maßnahmen ein, um Ihre Daten vor unbefugtem Zugriff, Verlust oder Missbrauch zu schützen. Die Übertragung Ihrer Daten erfolgt verschlüsselt.</p>
+        <h2>7. Sicherheit der Daten</h2>
+        <p>Wir setzen geeignete technische und organisatorische Maßnahmen ein, um Ihre Daten vor unbefugtem Zugriff,
+            Verlust oder Missbrauch zu schützen. Die Übertragung Ihrer Daten erfolgt verschlüsselt.</p>
 
-    <h2>8. Ihre Rechte</h2>
-    <p>Sie haben folgende Rechte in Bezug auf Ihre Daten:</p>
-    <ul>
-        <li><strong>Auskunft:</strong> Sie können Auskunft über Ihre gespeicherten Daten verlangen.</li>
-        <li><strong>Berichtigung und Löschung:</strong> Sie können unrichtige Daten berichtigen oder die Löschung Ihrer Daten verlangen.</li>
-        <li><strong>Widerspruch:</strong> Sie können der Verarbeitung Ihrer Daten widersprechen.</li>
-        <li><strong>Widerruf der Einwilligung:</strong> Sie können eine erteilte Einwilligung jederzeit widerrufen.</li>
-    </ul>
+        <h2>8. Ihre Rechte</h2>
+        <p>Sie haben folgende Rechte in Bezug auf Ihre Daten:</p>
+        <ul>
+            <li><strong>Auskunft:</strong> Sie können Auskunft über Ihre gespeicherten Daten verlangen.</li>
+            <li><strong>Berichtigung und Löschung:</strong> Sie können unrichtige Daten berichtigen oder die Löschung
+                Ihrer Daten verlangen.</li>
+            <li><strong>Widerspruch:</strong> Sie können der Verarbeitung Ihrer Daten widersprechen.</li>
+            <li><strong>Widerruf der Einwilligung:</strong> Sie können eine erteilte Einwilligung jederzeit widerrufen.
+            </li>
+        </ul>
 
-    <h2>9. Änderungen der Datenschutzerklärung</h2>
-    <p>Wir behalten uns das Recht vor, diese Datenschutzerklärung bei Bedarf anzupassen, um sie an Änderungen in der App oder an neue rechtliche Vorgaben anzupassen.</p>
-    <p>Die jeweils aktuelle Version ist jederzeit unter dieser URL abrufbar.</p>
+        <h2>9. Änderungen der Datenschutzerklärung</h2>
+        <p>Wir behalten uns das Recht vor, diese Datenschutzerklärung bei Bedarf anzupassen, um sie an Änderungen in der
+            App oder an neue rechtliche Vorgaben anzupassen.</p>
+        <p>Die jeweils aktuelle Version ist jederzeit unter dieser URL abrufbar.</p>
 
-    <p><a href="index.html">Zurück zur Support-Seite</a></p>
+        <div class="footer">
+            <p><a href="index.html">Zurück zur Support-Seite</a></p>
+        </div>
+    </div>
 </body>
+
 </html>
